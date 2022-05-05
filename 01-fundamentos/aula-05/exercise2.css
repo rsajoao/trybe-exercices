@@ -1,0 +1,103 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* # Phone */
+@media screen and (min-width:320px) {
+
+    body {
+        background-color: rgb(255, 245, 245);
+        color: rgb(24, 24, 24);
+        margin: 0px;
+    }
+
+    header {
+        display: flex;
+        height: 75px;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(24, 24, 24);
+        color: crimson;
+        font-size: 1.4rem;
+    }
+
+    header nav {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    header p {
+        margin: 0px;
+    }
+
+
+    header nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+        margin: 15px 0 0 0;
+    }
+
+    .aside-one,
+    .aside-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .aside-one {
+        padding-top: 75px;
+    }
+
+    .aside-two {
+        background-color: rgb(24, 24, 24);
+        color: crimson;
+    }
+
+    .main-content {
+        background-color: rgb(255, 245, 245);
+        color: rgb(24, 24, 24);
+        text-align: justify;
+        padding: 30px;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    footer {
+        background-color: rgb(24, 24, 24);
+        color: rgb(255, 245, 245);
+        text-align: justify;
+        padding: 40px;
+        margin: 0;
+        }
+
+
+}
+
+/* # Tablet */
+@media screen and (min-width:321px) and (max-width:768px) {}
+
+/* # Desktop */
+@media screen and (min-width:769px) {}
