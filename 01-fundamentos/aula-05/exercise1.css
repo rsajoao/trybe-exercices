@@ -2,46 +2,97 @@
  * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * apply a natural box layout model to all elements, but allowing components to change
  */
- html {
+html {
     box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
-  
-  body {
-  
-  }
-  
-  article {
-  
-  }
-  
-  h1 {
-  
-  }
-  
-  h2 {
-  
-  }
-  
-  img {
-      max-width: 100%;
-  }
-  
-  main {
-  
-  }
-  
-  section {
-  
-  }
-  
-  figure {
-      margin: 0;
-  }
-  
-  figcaption {
+}
+
+
+body {
+    font-size: 1em;
+    text-align: justify;
+    margin: 25px;
+}
+
+header {
+    margin: 25px;
+}
+
+article {
+    margin: 25px;
+}
+
+main {
+    margin: 25px;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 300px;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+figcaption {
     font-size: .8em;
-  }
+}
+
+@media screen and (min-width: 950px) {
+    body {
+        background-color: #fcfade;
+        font-size: 1.5em;
+        color: #221d34;
+    }
+
+    section {
+        display: flex;
+        flex-flow: wrap;
+        flex-basis: 400px;
+        justify-content: space-evenly;
+        max-width: 950px;
+        margin: auto;
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1405px) {
+
+    header,
+    article,
+    main {
+        max-width: 950px;
+        margin: auto;
+    }
+
+}
