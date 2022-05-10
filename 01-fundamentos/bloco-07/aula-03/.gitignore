@@ -1,3 +1,5 @@
 node_modules
 verificaNumeros.js
 verificaNumeros.test.js
+script.js
+script.test.js
