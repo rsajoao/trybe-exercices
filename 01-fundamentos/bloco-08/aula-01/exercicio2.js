@@ -1,17 +1,15 @@
 const verificacao = (number) => {
-  const numeroSorteado = Math.floor(Math.random() * 6);
+  const numeroSorteado = Math.ceil(Math.random() * 5);
   if (number === numeroSorteado) {
-    console.log(numeroSorteado);
-    return `Parabéns! Você ganhou!`;
+    return `O número sorteado foi ${numeroSorteado} e o número apostado foi ${number}. Parabéns, você ganhou!`;
   } else {
-    console.log(numeroSorteado);
-    return `Tente novamente.`;
-  }; 
-};
+    return `O número sorteado foi ${numeroSorteado} e o número apostado foi ${number}. Tente novamente.`;
+  }
+}
 
 const sorteio = (number, anotherfunction) => {
-  return anotherfunction(number);
-};
+  return anotherfunction(number)
+}
 
 const result = sorteio(3, verificacao);
 console.log(result);
