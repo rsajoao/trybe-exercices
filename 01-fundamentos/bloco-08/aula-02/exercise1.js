@@ -86,4 +86,18 @@ console.log(`'${getNamedBook(books).name}' foi o primeiro resultado cujo título
 const booksOrderedByReleaseYearDesc = (books) => books.sort((bookA, bookB) => bookB.releaseYear - bookA.releaseYear);
 console.log(booksOrderedByReleaseYearDesc(books)); // [!] SÓ CONSEGUI COM O GABARITO. ESTUDAR MAIS O MÉTODO .sort !!!!
 
-//
+// 5. Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário
+const everyoneWasBornOnSecXX = (books) => books.every((book) => book.author.birthYear > 1900 && book.author.birthYear < 2001);
+if(everyoneWasBornOnSecXX(books) === false) {
+  console.log(`Nem todos os autores nasceram no século XX. return ${everyoneWasBornOnSecXX(books)}.`);
+} else {
+  console.log(`Todos os autores nasceram no século XX. return ${everyoneWasBornOnSecXX(books)}.`);
+};
+
+// 6. Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário
+const someBookWasReleaseOnThe80s = (books) => books.some((book) => book.releaseYear > 1979 && book.releaseYear < 1990);
+if (someBookWasReleaseOnThe80s(books) === true) {
+  console.log(`Há pelo menos um livro lançado na década de 80. return ${someBookWasReleaseOnThe80s(books)}`);
+} else {
+  console.log(`Nenhum livro na lista foi publicado na década de 80. ${someBookWasReleaseOnThe80s(books)}`);
+}
