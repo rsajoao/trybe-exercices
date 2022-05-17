@@ -81,3 +81,9 @@ console.log(`O livro que possui o menor título é ${smallerName(books).name}.`)
 // 3. Encontre o primeiro livro cujo nome possui 26 caracteres.
 const getNamedBook = books => books.find(book => book.name.length === 26);
 console.log(`'${getNamedBook(books).name}' foi o primeiro resultado cujo título do livre possui exatamente 26 caracteres.`);
+
+// 4. Ordene os livros por data de lançamento em ordem decrescente
+const booksOrderedByReleaseYearDesc = (books) => books.sort((bookA, bookB) => bookB.releaseYear - bookA.releaseYear);
+console.log(booksOrderedByReleaseYearDesc(books)); // [!] SÓ CONSEGUI COM O GABARITO. ESTUDAR MAIS O MÉTODO .sort !!!!
+
+//
