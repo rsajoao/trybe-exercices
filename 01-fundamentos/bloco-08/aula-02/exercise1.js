@@ -100,4 +100,13 @@ if (someBookWasReleaseOnThe80s(books) === true) {
   console.log(`Há pelo menos um livro lançado na década de 80. return ${someBookWasReleaseOnThe80s(books)}`);
 } else {
   console.log(`Nenhum livro na lista foi publicado na década de 80. ${someBookWasReleaseOnThe80s(books)}`);
-}
+};
+
+// 7. Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+const authorUnique = (books) => {
+  return books.every((book) => 
+    !books.some((bookSome) =>
+      (bookSome.author.birthYear === book.author.birthYear)
+        && (bookSome.author.name !== book.author.name)));
+};
+// TAMBÉM PRECISEI DO GABARITO, MAS ENTENDI MELHOR COMO FUNCIONA. [!]
