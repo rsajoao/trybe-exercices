@@ -77,3 +77,7 @@ const smallerName = (books) => {
   return smaller;
 }
 console.log(`O livro que possui o menor título é ${smallerName(books).name}.`);
+
+// 3. Encontre o primeiro livro cujo nome possui 26 caracteres.
+const getNamedBook = books => books.find(book => book.name.length === 26);
+console.log(`'${getNamedBook(books).name}' foi o primeiro resultado cujo título do livre possui exatamente 26 caracteres.`);
