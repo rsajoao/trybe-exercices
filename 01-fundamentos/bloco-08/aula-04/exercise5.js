@@ -14,4 +14,4 @@ const contemA = (array) => {
     },0)
   },0)
 }
-console.log(contemA(names))
+console.log(contemA(names));
