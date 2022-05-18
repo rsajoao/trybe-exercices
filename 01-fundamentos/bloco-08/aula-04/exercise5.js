@@ -9,9 +9,7 @@ const names = [
 const contemA = (array) => {
   return array.reduce((A, palavra) => {
     return A += palavra.split('').reduce((a, letra) => {
-      if (letra === 'a' || letra === 'A') {
-        return a += 1;
-      }
+      if (letra === 'a' || letra === 'A') return a += 1;
       return a;
     },0)
   },0)
