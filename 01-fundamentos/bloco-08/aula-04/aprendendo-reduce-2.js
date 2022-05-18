@@ -86,3 +86,4 @@ const result = (array) => array.map((estudante) => {
     materia.nota === maiorNota).name};
 });
 console.log(result(estudantes));
+
