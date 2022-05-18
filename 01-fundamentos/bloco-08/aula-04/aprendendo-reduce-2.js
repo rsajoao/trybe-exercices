@@ -78,13 +78,11 @@ const estudantes = [
 // Você usará tanto o map quanto, dentro dele, o reduce!
 
 const result = (array) => array.map((estudante) => {
-
   const materias = estudante.materias;
   const notas = materias.map((materia) => materia.nota);
-
+  const maiorNota = notas.reduce((maiorNota, nota) => maiorNota > nota ? maiorNota : nota);
 
   return {name: estudante.nome, materia: materias.find((materia) => 
-    materia.nota === notas.reduce((maiorNota, notaAtual) => (maiorNota > notaAtual) ? maiorNota : notaAtual)).name}
+    materia.nota === maiorNota).name};
 });
-
 console.log(result(estudantes));
