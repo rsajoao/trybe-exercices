@@ -14,28 +14,28 @@ const pokemons = [
       type: 'Water',
       ability: 'Water Gun',
     },
-  ];
+];
   
-  function getPokemonDetails(filter, callback) {
+function getPokemonDetails(filter, callback) {
     setTimeout(() => {
-      if (pokemons.find(filter) === undefined) {
-        return callback(new Error('Não temos esse pokémon para você :('), null)
-      }
-      const pokemon = pokemons.find(filter);
-  
-      const { name, type, ability } = pokemon;
-  
-      const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
-  
-      callback(null, messageFromProfOak);
+        if (pokemons.find(filter) === undefined) {
+            return callback(new Error('Não temos esse pokémon para você :('), null)
+        }
+        const pokemon = pokemons.find(filter);
+
+        const { name, type, ability } = pokemon;
+
+        const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
+
+        callback(null, messageFromProfOak);
     }, 20);
-  }
+}
   
 getPokemonDetails((pokemon) => pokemon.name === 'Bulbasaur', function (err, result) {
     const finalResult = (err === null) ? result : err.message;
     console.log(finalResult);
 });
-  
-  module.exports = {
+
+module.exports = {
     getPokemonDetails,
-  };
+};
